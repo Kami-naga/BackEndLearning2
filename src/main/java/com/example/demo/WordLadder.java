@@ -2,6 +2,8 @@ package com.example.demo;
 import java.util.*;
 import java.io.*;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class WordLadder {
     /**
      * wordladder
@@ -15,6 +17,8 @@ public class WordLadder {
     static String word2;
     private static StringBuffer AnswerReturn=new StringBuffer("");
     enum KEY{ERR,OK}
+
+    private static Logger logger = LogManager.getLogger(WordLadder.class);
 
     WordLadder(String word1,String word2){
         WordLadder.word1 = word1;
@@ -46,7 +50,7 @@ public class WordLadder {
         }
         catch(Exception e){
             AnswerReturn= new StringBuffer("No such file!");
-            System.err.println("No such file!");
+            logger.info("No such file!");
             return false;
         }
     }
@@ -59,10 +63,11 @@ public class WordLadder {
         }
         catch(Exception e){
             AnswerReturn=new StringBuffer(e.getMessage());
-            System.err.println(e.getMessage());
+            logger.info(e.getMessage());
             return KEY.ERR;
         }
     }
+    /*
     static boolean getAWord(String word)throws Exception{
         if("".equals(word)){
             System.out.println("Have a nice day!");
@@ -71,6 +76,7 @@ public class WordLadder {
         checkWord(word);
         return false;
     }
+    */
     static void checkWord(String word)throws Exception{
         char [] cWord = word.toCharArray();
         for(char ch : cWord){
@@ -146,7 +152,7 @@ public class WordLadder {
         }
         catch(Exception e){
             AnswerReturn=new StringBuffer(e.getMessage());
-            System.err.println(e.getMessage());
+            logger.info(e.getMessage());
             return false;
         }
     }
@@ -158,7 +164,7 @@ public class WordLadder {
             ans.append(answer.pop());
             ans.append("\t");
         }
-        System.out.println(ans);
+        //System.out.println(ans);
         return ans;
     }
 }

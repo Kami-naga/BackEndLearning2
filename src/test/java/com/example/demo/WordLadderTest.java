@@ -52,6 +52,7 @@ public void getDicNormal(){
 * Method: getAWord(String word)
 *
 */
+/*
 @Test
 public void testGetAWordQuit() throws Exception {
     Assert.assertTrue(WordLadder.getAWord(""));
@@ -65,9 +66,10 @@ public void testGetAWordNormal() throws Exception {
     System.setIn(stdin);
     Assert.assertFalse(WordLadder.getAWord("azure"));
 }
-/** 
-* 
-* Method: checkWord(String word) 
+*/
+/**
+*
+* Method: checkWord(String word)
 * 
 */
 @Rule
