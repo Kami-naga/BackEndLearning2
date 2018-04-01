@@ -158,7 +158,7 @@ public class WordLadder {
     }
 
     private static StringBuffer printout(){
-        System.out.println("A ladder from "+word1+" back to " +word2+":");
+        //System.out.println("A ladder from "+word1+" back to " +word2+":");
         StringBuffer ans= new StringBuffer("");
         while(!answer.empty()){
             ans.append(answer.pop());

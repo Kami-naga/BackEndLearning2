@@ -19,7 +19,7 @@ public class WordLadderTest {
 * Method: getDic() 
 * 
 */
-
+/*
 @Test
 public void getDicQuit() {
 //   Method method = wordLadder.getClass().getMethod("getDic");
@@ -34,7 +34,7 @@ public void getDicQuit() {
         System.setIn(stdin);
     }
 }
-
+*/
 @Test
 public void getDicNormal(){
     String fileName = "dictionary.txt";
